@@ -1,0 +1,386 @@
+/* ===== RESET & DASAR ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #e0f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80')
+    no-repeat center / cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px 80px;
+  position: relative;
+}
+
+header .logo {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+  background: #fff;
+}
+
+header .logo span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 2.8rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background: #006d77;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: #83c5be;
+  color: #000;
+}
+
+/* ===== SLIDER ===== */
+.slider {
+  width: 100%; 
+  height: 450px; 
+  overflow: hidden; 
+} 
+
+.slides { 
+  display: flex; 
+  animation: slideShow 80s infinite; 
+} 
+
+.slides img { 
+  width: 100%; 
+  height: 450px; 
+  object-fit: cover; 
+}
+
+@keyframes slideShow {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  gap: 20px;
+}
+
+article {
+  flex: 2;
+}
+
+article h2 {
+  color: #006d77;
+  border-bottom: 3px solid #83c5be;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+article img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+article p {
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+/* ===== ASIDE ===== */
+aside {
+  flex: 1;
+  background: #edf6f9;
+  padding: 15px;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+aside h3 {
+  color: #006d77;
+  border-bottom: 2px solid #83c5be;
+  margin-bottom: 10px;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside ul li {
+  margin: 8px 0;
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: #006d77;
+}
+
+aside ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+.footer-dark {
+  background: linear-gradient(135deg, #0a6f73, #064e4f);
+  color: #e6f7f6;
+  padding: 50px 20px 20px;
+  margin-top: 80px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* BRAND */
+.footer-brand {
+  flex: 1 1 220px;
+}
+
+.footer-brand img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* COLUMN */
+.footer-column {
+  flex: 1 1 180px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.footer-column h4::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: #34d399;
+  display: block;
+  margin-top: 6px;
+  border-radius: 5px;
+}
+
+.footer-column a {
+  display: block;
+  color: #d1fae5;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.footer-column a i {
+  margin-right: 8px;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 13px;
+  color: #c7d2fe;
+}
+
+/* ===== CARD ===== */
+.card {
+  position: relative;
+}
+
+/* ===== WISHLIST BUTTON (KIRI ATAS) ===== */
+.wishlist-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  width: 36px;
+  height: 36px;
+
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  color: #e63946;
+
+  cursor: pointer;
+  z-index: 20;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* Hover effect */
+.wishlist-btn:hover {
+  transform: scale(1.15);
+  background: #fee2e2;
+}
+
+/* Active (sudah di wishlist) */
+.wishlist-btn.active {
+  color: #c1121f;
+}
+
+.floating-wishlist {
+  position: absolute;      
+  top: 20px;
+  right: 20px;
+
+  height: 44px;
+  padding: 6px 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #0aa5a5;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+
+  z-index: 10000;        
+}
+
+
+/* ===== USER & WISHLIST BAR ===== */
+.user-profile {
+  position: absolute;
+  top: 20px;
+  right: 110px; 
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 44px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  object-fit: cover;
+}
+
+.username {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1;
+}
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  nav a {
+    padding: 10px;
+  }
+
+  .slider {
+    height: 250px;
+  }
+
+  .slides img {
+    height: 250px;
+  }
+
+  .user-profile {
+  right: 70px;
+}
+
+.username {
+  display: none; 
+}
+
+
+}
